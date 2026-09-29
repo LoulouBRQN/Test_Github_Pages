@@ -1,0 +1,82 @@
+/* Image de fond */
+#monde{
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	overflow: hidden;
+	margin: 0px;
+	padding: 0px;
+	left: 0px;
+	top: 0px;
+	user-select: none;
+	background-image: url("../img/background.jpg");
+	background-repeat: repeat;
+	background-size: 120%;
+	border: none;
+}
+
+@keyframes tourne{
+	100%{transform: rotateZ(360deg);}
+}
+	
+
+/* Le vaisseau */
+#starship{
+	height: 55px;
+	width: 115px;
+	position: absolute;
+	left: 38%;
+	top: 44%;
+	background-image: url("../img/starship.png");	
+	background-size: 100% 100%;
+	z-index: 10;
+}
+
+/* Les asteroids */
+.asteroid{
+	height: 54px;
+	width: 54px;
+	position: absolute;
+	left: 68%;
+	top: 68%;
+	background-image: url("../img/asteroid.png");
+	background-size: 100% 100%;
+	z-index: 9;
+	animation: tourne 1s linear infinite;
+}
+
+#explosion {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-image: url("../explosion.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: none;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.game-over {
+    position: fixed;
+    inset: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+}
+
+.popup {
+    background: white;
+    padding: 30px 50px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.popup button {
+    padding: 10px 25px;
+    font-size: 18px;
+    cursor: pointer;
+}
